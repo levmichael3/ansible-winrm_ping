@@ -14,12 +14,12 @@ pipeline {
     stage ('run Playbook...'){
       steps {
         script {
-          powershell(returnStdout: true, script: "pwd")
+          powershell(returnStdout: true, script: "cygwin ansible")
 
-          ansiblePlaybook(
-          playbook: 'ping.yml',
-          inventory: 'hosts'
-          )
+          // ansiblePlaybook(
+          // playbook: 'ping.yml',
+          // inventory: 'hosts'
+          // )
         }
 
       }
