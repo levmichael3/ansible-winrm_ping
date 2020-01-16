@@ -14,7 +14,8 @@ pipeline {
     stage ('run Playbook...'){
       steps {
         script {
-          bat ("pwd")
+          powershell(returnStdout: true, script: "pwd")
+
           ansiblePlaybook(
           playbook: 'ping.yml',
           inventory: 'hosts'
