@@ -6,6 +6,7 @@ pipeline {
     skipDefaultCheckout()
   }
   environment {
+    ONE=1
 
   }
   agent any
@@ -19,7 +20,7 @@ pipeline {
           inventory: 'hosts'
           )
         }
-        
+
       }
     }
   }
